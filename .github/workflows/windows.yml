@@ -1,0 +1,22 @@
+name: Windows build
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+jobs:
+  validate:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '10.0.x'
+      - name: Build all projects
+        run: dotnet build NaeemTractors.sln -c Release
+      - name: Test and package
+        shell: pwsh
+        run: ./scripts/Publish-Windows.ps1
+      - uses: actions/upload-artifact@v4
+        with:
+          name: NaeemTractors-Windows-x64
+          path: artifacts/NaeemTractors-Windows-x64.zip
