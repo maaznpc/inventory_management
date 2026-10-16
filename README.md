@@ -4,7 +4,11 @@ A working first implementation in **C# / .NET 10 / WPF / SQLite**, for a single 
 
 ## Download from GitHub
 
-Open this repository’s **Actions → Windows build**, select a successful run, and download **NaeemTractors-Windows-x64** under **Artifacts**. GitHub may require you to sign in. Extract the downloaded artifact, then extract the app ZIP inside it and open `NaeemTractors.exe`. GitHub’s green **Code → Download ZIP** downloads source code only.
+Repository: [maaznpc/inventory_management](https://github.com/maaznpc/inventory_management).
+
+[Download the Windows app ZIP](https://github.com/maaznpc/inventory_management/raw/refs/heads/main/downloads/NaeemTractors-Windows-x64.zip). Extract the entire ZIP and open `NaeemTractors.exe`. The v0.1 package includes .NET and needs no separate runtime installation. Its SHA-256 is recorded beside the ZIP in `downloads/`.
+
+For later builds, open **Actions → Windows build**, select a successful run, and download **NaeemTractors-Windows-x64** under **Artifacts**. GitHub may require you to sign in. Extract the downloaded artifact, then extract the app ZIP inside it. The workflow generates new artifacts; it does not automatically replace the checked-in v0.1 ZIP. GitHub’s green **Code → Download ZIP** downloads the repository contents rather than a ready-to-run app folder.
 
 ## Run on Windows
 
